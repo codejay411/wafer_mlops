@@ -10,7 +10,6 @@ src/pipeline_03_pred_data_validation.py
 src/pipeline_04_prediction.py
 src/predictFromModel.py
 src/prediction_Validation_Insertion.py
-src/read_params.py
 src/trainingModel.py
 src/training_Validation_Insertion.py
 src.egg-info/PKG-INFO
