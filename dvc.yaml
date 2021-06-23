@@ -1,0 +1,115 @@
+stages:
+  training_data_validation:
+    cmd: python src/pipeline_01_training_data_validation.py --config=config/params.yaml
+    deps:
+    - src/pipeline_01_training_data_validation.py
+    - src/training_Validation_Insertion.py
+    - src/Training_Raw_data_validation/rawValidation.py
+    - src/DataTypeValidation_Insertion_Training/DataTypeValidation.py
+    - src/DataTransform_Training/DataTransformation.py
+    - Training_Batch_files/
+    - src/application_logging/logger.py
+
+    outs:
+    - data/Training_FileFromDB/master.csv
+    - data/Training_Raw_files_validated/
+    - data/TrainingArchiveBadData/
+    - Training_Database/Training.db
+    - Training_Logs/Training_Main_Log.txt
+    - Training_Logs/columnValidationLog.txt
+    - Training_Logs/DataBaseConnectionLog.txt
+    - Training_Logs/dataTransformLog.txt
+    - Training_Logs/DbInsertLog.txt
+    - Training_Logs/DbTableCreateLog.txt
+    - Training_Logs/ExportToCsv.txt
+    - Training_Logs/GeneralLog.txt
+    - Training_Logs/missingValuesInColumn.txt
+    - Training_Logs/nameValidationLog.txt
+    - Training_Logs/valuesfromSchemaValidationLog.txt
+
+  model_training:
+    cmd: python src/pipeline_02_model_training.py --config=config/params.yaml
+    deps:
+    - src/pipeline_02_model_training.py
+    - src/trainingModel.py
+    - src/data_ingestion/data_loader.py
+    - src/data_preprocessing/preprocessing.py
+    - src/data_preprocessing/clustering.py
+    - src/best_model_finder/tuner.py
+    - src/file_operations/file_methods.py
+    - src/application_logging/logger.py
+    - data/Training_FileFromDB/master.csv
+    # params:
+    # - data_preprocessing.KNNImputer.n_neighbors
+    # - data_preprocessing.KNNImputer.weights
+    # - data_preprocessing.KNNImputer.missing_values
+    # - data_preprocessing.KMeansClustering.init
+    # - data_preprocessing.KMeansClustering.n_cluster_max
+    # - data_preprocessing.KMeansClustering.KneeLocator.curve
+    # - data_preprocessing.KMeansClustering.KneeLocator.direction
+    # - training.random_forest.cv
+    # - training.random_forest.verbose
+    # - training.random_forest.param_grid.n_estimators
+    # - training.random_forest.param_grid.criterion
+    # - training.random_forest.param_grid.max_depth
+    # - training.random_forest.param_grid.max_features
+    # - training.xg_boost.cv
+    # - training.xg_boost.verbose
+    # - training.xg_boost.param_grid.learning_rate
+    # - training.xg_boost.param_grid.max_depth
+    # - training.xg_boost.param_grid.n_estimators
+    # - base.random_state
+    outs:
+    - models/KMeans
+    - models/RandomForest0
+    - models/RandomForest1
+    - models/RandomForest2
+    - data/preprocessed_data/null_values.csv
+    - data/preprocessed_data/K-Means_Elbow.PNG
+    - Training_Logs/ModelTrainingLog.txt
+
+  prediction_data_validation:
+    cmd: python src/pipeline_03_pred_data_validation.py --config=config/params.yaml
+    deps:
+    - src/pipeline_03_pred_data_validation.py  
+    - src/prediction_Validation_Insertion.py
+    - src/Prediction_Raw_Data_Validation/predictionDataValidation.py
+    - src/DataTypeValidation_Insertion_Prediction/DataTypeValidationPrediction.py
+    - src/DataTransformation_Prediction/DataTransformationPrediction.py
+    - Prediction_Batch_files/
+    - src/application_logging/logger.py
+    outs:
+    - data/Prediction_FileFromDB/master.csv
+    - data/Prediction_Raw_files_validated/
+    - data/PredictionArchiveBadData/
+    - Prediction_Database/Prediction.db
+    - Prediction_Logs/Prediction_Log.txt
+    - Prediction_Logs/columnValidationLog.txt
+    - Prediction_Logs/DataBaseConnectionLog.txt
+    - Prediction_Logs/dataTransformLog.txt
+    - Prediction_Logs/DbInsertLog.txt
+    - Prediction_Logs/DbTableCreateLog.txt
+    - Prediction_Logs/ExportToCsv.txt
+    - Prediction_Logs/GeneralLog.txt
+    - Prediction_Logs/missingValuesInColumn.txt
+    - Prediction_Logs/nameValidationLog.txt
+    - Prediction_Logs/valuesfromSchemaValidationLog.txt
+
+  # prediction:
+  #   cmd: python src/pipeline_04_prediction.py --config=config/params.yaml
+  #   deps:
+  #   - src/pipeline_04_prediction.py
+  #   - src/predictFromModel.py
+  #   - src/data_ingestion/data_loader_prediction.py
+  #   - data/Training_FileFromDB/master.csv
+  #   metrics:
+  #   - report/scores.json:
+  #       cache: false
+  #   - report/params.json:
+  #       cache: false
+  #   outs:
+  #   - src/Prediction_Output_File/Predictions.csv
+  #   - Prediction_Logs/Prediction_Log.txt
+
+
+

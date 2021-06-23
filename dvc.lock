@@ -1,0 +1,204 @@
+schema: '2.0'
+stages:
+  prediction_data_validation:
+    cmd: python src/pipeline_03_pred_data_validation.py --config=config/params.yaml
+    deps:
+    - path: Prediction_Batch_files/
+      md5: f527a04060b91522af3440cf7bc808f9.dir
+      size: 6745582
+      nfiles: 39
+    - path: src/DataTransformation_Prediction/DataTransformationPrediction.py
+      md5: 6375d883837734cb9ecb8d11e8c81491
+      size: 2845
+    - path: src/DataTypeValidation_Insertion_Prediction/DataTypeValidationPrediction.py
+      md5: fdd0fe468440e6ff82600cc3e86c874f
+      size: 8596
+    - path: src/Prediction_Raw_Data_Validation/predictionDataValidation.py
+      md5: 63f50869f9ea207c51c69c2d054c42ec
+      size: 18843
+    - path: src/application_logging/logger.py
+      md5: 80c6d8f8512f295a9403ad28a66d3d15
+      size: 389
+    - path: src/pipeline_03_pred_data_validation.py
+      md5: 2533ecf9d447c7dfaac0c68ee0d88cb4
+      size: 1549
+    - path: src/prediction_Validation_Insertion.py
+      md5: 64530262a5a39b332f3dad7f3c8b2db8
+      size: 3898
+    outs:
+    - path: Prediction_Database/Prediction.db
+      md5: 5081959413adfebbec0f0fd1d2dbd71e
+      size: 4194304
+    - path: Prediction_Logs/DataBaseConnectionLog.txt
+      md5: 77876dd949919937b857d5b4955abdc6
+      size: 248
+    - path: Prediction_Logs/DbInsertLog.txt
+      md5: a2cb016992294a47e5d1f9e634a632b2
+      size: 64449
+    - path: Prediction_Logs/DbTableCreateLog.txt
+      md5: a253f965aad599790ab2bd83ed345905
+      size: 52
+    - path: Prediction_Logs/ExportToCsv.txt
+      md5: e8bf0fc9e21cf11bfd1f7cb78ecb1d33
+      size: 52
+    - path: Prediction_Logs/GeneralLog.txt
+      md5: 1c8287cfd571fa22486a453677da4b57
+      size: 178
+    - path: Prediction_Logs/Prediction_Log.txt
+      md5: 4479b1570916540f8323070238e3662a
+      size: 851
+    - path: Prediction_Logs/columnValidationLog.txt
+      md5: 356cc6a74fec606c154d44d358238571
+      size: 2052
+    - path: Prediction_Logs/dataTransformLog.txt
+      md5: 713a650140f910f9b3db877e2f992ef2
+      size: 738
+    - path: Prediction_Logs/missingValuesInColumn.txt
+      md5: 65d1eabc8ca7b2908025158b6a0bce74
+      size: 877
+    - path: Prediction_Logs/nameValidationLog.txt
+      md5: 66c94429b8f930ba1e1b23caddab6896
+      size: 3891
+    - path: Prediction_Logs/valuesfromSchemaValidationLog.txt
+      md5: 04cc46f1dd0b166d206d024de1b7a3af
+      size: 103
+    - path: data/PredictionArchiveBadData/
+      md5: 796f9f8fcc8e76e867da2b3d9772941c.dir
+      size: 3539824
+      nfiles: 30
+    - path: data/Prediction_FileFromDB/master.csv
+      md5: f1d9e811a953b54cc60e9b38060c5f32
+      size: 4134361
+    - path: data/Prediction_Raw_files_validated/
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+  training_data_validation:
+    cmd: python src/pipeline_01_training_data_validation.py --config=config/params.yaml
+    deps:
+    - path: Training_Batch_files/
+      md5: 9080e0b87a3fd538649030c0d625e114.dir
+      size: 13630305
+      nfiles: 83
+    - path: src/DataTransform_Training/DataTransformation.py
+      md5: 70ca9b92e5187b6dbfc3cf38402b056d
+      size: 2895
+    - path: src/DataTypeValidation_Insertion_Training/DataTypeValidation.py
+      md5: 2bb58a85ca45da5dc009da6a980fe86a
+      size: 8986
+    - path: src/Training_Raw_data_validation/rawValidation.py
+      md5: 476904637252a5cc3030e9389a4336ab
+      size: 18448
+    - path: src/application_logging/logger.py
+      md5: 80c6d8f8512f295a9403ad28a66d3d15
+      size: 389
+    - path: src/pipeline_01_training_data_validation.py
+      md5: 184912b6bfee36450798f033131f4ba0
+      size: 1575
+    - path: src/training_Validation_Insertion.py
+      md5: f3e9f3c02d062de64b631804a6b2aca7
+      size: 3930
+    outs:
+    - path: Training_Database/Training.db
+      md5: 68bca2a3ae319d6fe353d45d37fd84ae
+      size: 4202496
+    - path: Training_Logs/DataBaseConnectionLog.txt
+      md5: d16a9da6d844c338ca6ff2864e411b19
+      size: 240
+    - path: Training_Logs/DbInsertLog.txt
+      md5: 2ddab86f03d3d068321f6caaf35c6d98
+      size: 64449
+    - path: Training_Logs/DbTableCreateLog.txt
+      md5: 4b11172cf1397ec70bbf9d0e96097016
+      size: 52
+    - path: Training_Logs/ExportToCsv.txt
+      md5: 3f885d5a7ecf1a1068fe4a7292678c04
+      size: 52
+    - path: Training_Logs/GeneralLog.txt
+      md5: 2888c7deecfb45f20bff1bb0c203562a
+      size: 178
+    - path: Training_Logs/Training_Main_Log.txt
+      md5: 2ac002e870a3d2def3916de8242bced8
+      size: 834
+    - path: Training_Logs/columnValidationLog.txt
+      md5: 4732ef94495ebb8b8750398eb6b02126
+      size: 2528
+    - path: Training_Logs/dataTransformLog.txt
+      md5: b97a600bf32230f74b90f8ad22b0c7c2
+      size: 738
+    - path: Training_Logs/missingValuesInColumn.txt
+      md5: 4c09fec8418465e95b9d7d4110180b55
+      size: 877
+    - path: Training_Logs/nameValidationLog.txt
+      md5: bf0ea958992deb0e3b4c027215cb3269
+      size: 8349
+    - path: Training_Logs/valuesfromSchemaValidationLog.txt
+      md5: 15cf518d66b7d104292a54bfed80181f
+      size: 103
+    - path: data/TrainingArchiveBadData/
+      md5: ccee4655a1e711ea36108d5fe7fd7b1d.dir
+      size: 10732173
+      nfiles: 74
+    - path: data/Training_FileFromDB/master.csv
+      md5: 2cba418459555e7233ca2dcf13a7e624
+      size: 4070635
+    - path: data/Training_Raw_files_validated/
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+  model_training:
+    cmd: python src/pipeline_02_model_training.py --config=config/params.yaml
+    deps:
+    - path: data/Training_FileFromDB/master.csv
+      md5: 2cba418459555e7233ca2dcf13a7e624
+      size: 4070635
+    - path: src/application_logging/logger.py
+      md5: 80c6d8f8512f295a9403ad28a66d3d15
+      size: 389
+    - path: src/best_model_finder/tuner.py
+      md5: 39f09618a738349428fb696e27583e66
+      size: 13440
+    - path: src/data_ingestion/data_loader.py
+      md5: 0ff0bdeb04295c72e53cce151f3ec94c
+      size: 1789
+    - path: src/data_preprocessing/clustering.py
+      md5: 1648640b26fa2f03a41645bca1e8121f
+      size: 5462
+    - path: src/data_preprocessing/preprocessing.py
+      md5: 0c32c9fb20837232ab35d25eb939f1d8
+      size: 9691
+    - path: src/file_operations/file_methods.py
+      md5: 8c361eb23894ad520ab058823a4c40da
+      size: 5577
+    - path: src/pipeline_02_model_training.py
+      md5: 89e0ea340fd9e29fd35e518e1bfe01bc
+      size: 1551
+    - path: src/trainingModel.py
+      md5: bf16ad12ac3f03093e5e5439ed1b0d7e
+      size: 4765
+    outs:
+    - path: Training_Logs/ModelTrainingLog.txt
+      md5: 58cdded22186b1c22df1f4653eb92b48
+      size: 4415
+    - path: data/preprocessed_data/K-Means_Elbow.PNG
+      md5: 740037f39737c10f23a0b0a9984d138c
+      size: 20794
+    - path: data/preprocessed_data/null_values.csv
+      md5: 3de7fcd28bded8fa20db3364a628694d
+      size: 11768
+    - path: models/KMeans
+      md5: 70b3b7d5fe169acf0158e2bdcf86a9bb.dir
+      size: 15376
+      nfiles: 1
+    - path: models/RandomForest0
+      md5: 9e12887918672718970b4fb78ec3a8d6.dir
+      size: 8220
+      nfiles: 1
+    - path: models/RandomForest1
+      md5: 49e325a3d0d0e5944ff87a8004b2489f.dir
+      size: 8511
+      nfiles: 1
+    - path: models/RandomForest2
+      md5: 6d0ffe07c846de45b531bf1167384b0a.dir
+      size: 8655
+      nfiles: 1

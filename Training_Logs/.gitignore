@@ -1,0 +1,12 @@
+/Training_Main_Log.txt
+/columnValidationLog.txt
+/DataBaseConnectionLog.txt
+/dataTransformLog.txt
+/DbInsertLog.txt
+/DbTableCreateLog.txt
+/ExportToCsv.txt
+/GeneralLog.txt
+/missingValuesInColumn.txt
+/nameValidationLog.txt
+/valuesfromSchemaValidationLog.txt
+/ModelTrainingLog.txt
