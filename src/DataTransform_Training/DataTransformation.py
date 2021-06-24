@@ -2,7 +2,7 @@ from datetime import datetime
 from os import listdir
 import pandas
 import yaml
-from application_logging.logger import App_Logger
+from src.application_logging.logger import App_Logger
 import os
 # from read_params import read_params
 def read_params(config_path):

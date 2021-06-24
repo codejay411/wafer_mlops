@@ -2,7 +2,7 @@ import os
 import argparse
 import yaml
 import logging
-from training_Validation_Insertion import train_validation
+from src.training_Validation_Insertion import train_validation
 # from trainingModel import trainModel
 # from prediction_Validation_Insertion import pred_validation
 # from predictFromModel import prediction
@@ -22,17 +22,7 @@ def main(config_path, datasource):
 
     train_valObj.train_validation()#calling the training_validation function
 
-    # trainModelObj = trainModel() #object initialization
-    # dnkfnvndvn
-    
-    # trainModelObj.trainingModel() #training the model for the files in the table
-
-
-    # pred_val = pred_validation(path) #object initialization
-
-    # pred_val.prediction_validation() #calling the prediction_validation function
-
-    # pred = prediction(path) #object initialization
+   
 
 if __name__=="__main__":
     args = argparse.ArgumentParser()

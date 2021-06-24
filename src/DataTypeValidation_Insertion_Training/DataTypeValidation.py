@@ -5,7 +5,7 @@ from os import listdir
 import os
 import yaml
 import csv
-from application_logging.logger import App_Logger
+from src.application_logging.logger import App_Logger
 # from read_params import read_params
 def read_params(config_path):
     with open(config_path) as yaml_file:

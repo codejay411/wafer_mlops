@@ -8,12 +8,12 @@ Revisions: None
 """
 # Doing the necessary imports
 from sklearn.model_selection import train_test_split
-from data_ingestion import data_loader
-from data_preprocessing import preprocessing
-from data_preprocessing import clustering
-from best_model_finder import tuner
-from file_operations import file_methods
-from application_logging import logger
+from src.data_ingestion import data_loader
+from src.data_preprocessing import preprocessing
+from src.data_preprocessing import clustering
+from src.best_model_finder import tuner
+from src.file_operations import file_methods
+from src.application_logging import logger
 
 import os
 import yaml

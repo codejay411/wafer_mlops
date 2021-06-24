@@ -1,9 +1,9 @@
 import pandas
-from file_operations import file_methods
-from data_preprocessing import preprocessing
-from data_ingestion import data_loader_prediction
-from application_logging import logger
-from Prediction_Raw_Data_Validation.predictionDataValidation import Prediction_Data_validation
+from src.file_operations import file_methods
+from src.data_preprocessing import preprocessing
+from src.data_ingestion import data_loader_prediction
+from src.application_logging import logger
+from src.Prediction_Raw_Data_Validation.predictionDataValidation import Prediction_Data_validation
 import os
 import yaml
 def read_params(config_path):

@@ -1,11 +1,7 @@
 import os
 import argparse
 import yaml
-import logging
-from training_Validation_Insertion import train_validation
-from trainingModel import trainModel
-from prediction_Validation_Insertion import pred_validation
-from predictFromModel import prediction
+from src.predictFromModel import prediction
 # # from read_params import read_params
 
 def read_params(config_path):

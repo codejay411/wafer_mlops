@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from kneed import KneeLocator
-from file_operations import file_methods
+from src.file_operations import file_methods
 import os
 import yaml
 def read_params(config_path):
