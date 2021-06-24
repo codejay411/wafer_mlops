@@ -8,62 +8,62 @@ stages:
       size: 6745582
       nfiles: 39
     - path: src/DataTransformation_Prediction/DataTransformationPrediction.py
-      md5: 6375d883837734cb9ecb8d11e8c81491
-      size: 2845
+      md5: c16a54447e7c0762e50545b42cb774c4
+      size: 2849
     - path: src/DataTypeValidation_Insertion_Prediction/DataTypeValidationPrediction.py
-      md5: fdd0fe468440e6ff82600cc3e86c874f
-      size: 8596
+      md5: 24ef645f6f9ece22b5806fec2b985e47
+      size: 8600
     - path: src/Prediction_Raw_Data_Validation/predictionDataValidation.py
-      md5: 63f50869f9ea207c51c69c2d054c42ec
-      size: 18843
+      md5: fd962653a236a2430ad7ec874a71b30d
+      size: 18847
     - path: src/application_logging/logger.py
       md5: 80c6d8f8512f295a9403ad28a66d3d15
       size: 389
     - path: src/pipeline_03_pred_data_validation.py
-      md5: 2533ecf9d447c7dfaac0c68ee0d88cb4
-      size: 1549
+      md5: a1ce6b0158aa2db086373d211fa6f842
+      size: 1043
     - path: src/prediction_Validation_Insertion.py
-      md5: 64530262a5a39b332f3dad7f3c8b2db8
-      size: 3898
+      md5: efb68f1ff499424d2b3b9adb67d09cce
+      size: 3914
     outs:
     - path: Prediction_Database/Prediction.db
       md5: 5081959413adfebbec0f0fd1d2dbd71e
       size: 4194304
     - path: Prediction_Logs/DataBaseConnectionLog.txt
-      md5: 77876dd949919937b857d5b4955abdc6
+      md5: 25a8970219457cb16cc631b47e48d650
       size: 248
     - path: Prediction_Logs/DbInsertLog.txt
-      md5: a2cb016992294a47e5d1f9e634a632b2
+      md5: 4c2bedd0c314ace54bdb40c0bf01f66b
       size: 64449
     - path: Prediction_Logs/DbTableCreateLog.txt
-      md5: a253f965aad599790ab2bd83ed345905
+      md5: 0c13c9d842b98eae01253fe5596bf28f
       size: 52
     - path: Prediction_Logs/ExportToCsv.txt
-      md5: e8bf0fc9e21cf11bfd1f7cb78ecb1d33
+      md5: d00cd7b740eb3eb6bb9f0567ba39b48f
       size: 52
     - path: Prediction_Logs/GeneralLog.txt
-      md5: 1c8287cfd571fa22486a453677da4b57
+      md5: e7efd7ffcd6482db61cff9930f1425fc
       size: 178
     - path: Prediction_Logs/Prediction_Log.txt
-      md5: 4479b1570916540f8323070238e3662a
+      md5: 8a93ab895f19255a431a40e5efda7710
       size: 851
     - path: Prediction_Logs/columnValidationLog.txt
-      md5: 356cc6a74fec606c154d44d358238571
+      md5: 0ce36815a8e80776e50f94bf5635f9b0
       size: 2052
     - path: Prediction_Logs/dataTransformLog.txt
-      md5: 713a650140f910f9b3db877e2f992ef2
+      md5: 908353de23dbc6ed8537315226a258e3
       size: 738
     - path: Prediction_Logs/missingValuesInColumn.txt
-      md5: 65d1eabc8ca7b2908025158b6a0bce74
+      md5: b6fffeeac85d78c8cfd4ec3920de1454
       size: 877
     - path: Prediction_Logs/nameValidationLog.txt
-      md5: 66c94429b8f930ba1e1b23caddab6896
+      md5: 3c29f3baca2e8c120e082358d05d51f9
       size: 3891
     - path: Prediction_Logs/valuesfromSchemaValidationLog.txt
-      md5: 04cc46f1dd0b166d206d024de1b7a3af
+      md5: 84a6ca9ecccfab21d6ff37fb233a3439
       size: 103
     - path: data/PredictionArchiveBadData/
-      md5: 796f9f8fcc8e76e867da2b3d9772941c.dir
+      md5: 451892e0a5f86a8c92c4250a4f7ed2f0.dir
       size: 3539824
       nfiles: 30
     - path: data/Prediction_FileFromDB/master.csv
@@ -81,62 +81,62 @@ stages:
       size: 13630305
       nfiles: 83
     - path: src/DataTransform_Training/DataTransformation.py
-      md5: 70ca9b92e5187b6dbfc3cf38402b056d
-      size: 2895
+      md5: da318973e36d6891fbedd7c64b4de642
+      size: 2899
     - path: src/DataTypeValidation_Insertion_Training/DataTypeValidation.py
-      md5: 2bb58a85ca45da5dc009da6a980fe86a
-      size: 8986
+      md5: fc64f82b76347c776b1afb26310da1fd
+      size: 8990
     - path: src/Training_Raw_data_validation/rawValidation.py
-      md5: 476904637252a5cc3030e9389a4336ab
-      size: 18448
+      md5: bdb47079a6d99490f6037690c748332e
+      size: 18452
     - path: src/application_logging/logger.py
       md5: 80c6d8f8512f295a9403ad28a66d3d15
       size: 389
     - path: src/pipeline_01_training_data_validation.py
-      md5: 184912b6bfee36450798f033131f4ba0
-      size: 1575
+      md5: 6126cf8ce62f9dd2a62aad443f770cb9
+      size: 1021
     - path: src/training_Validation_Insertion.py
-      md5: f3e9f3c02d062de64b631804a6b2aca7
-      size: 3930
+      md5: 8b71129af0be428104d410b5213baa15
+      size: 3946
     outs:
     - path: Training_Database/Training.db
       md5: 68bca2a3ae319d6fe353d45d37fd84ae
       size: 4202496
     - path: Training_Logs/DataBaseConnectionLog.txt
-      md5: d16a9da6d844c338ca6ff2864e411b19
+      md5: b955935b4c717cf28ce0ec37382b6b3c
       size: 240
     - path: Training_Logs/DbInsertLog.txt
-      md5: 2ddab86f03d3d068321f6caaf35c6d98
+      md5: e3e53986573a08ff58e6921b9461604f
       size: 64449
     - path: Training_Logs/DbTableCreateLog.txt
-      md5: 4b11172cf1397ec70bbf9d0e96097016
+      md5: 1b9f0f1909098c162a050bce29411822
       size: 52
     - path: Training_Logs/ExportToCsv.txt
-      md5: 3f885d5a7ecf1a1068fe4a7292678c04
+      md5: 76b7017889c79fa4b1540947d964afce
       size: 52
     - path: Training_Logs/GeneralLog.txt
-      md5: 2888c7deecfb45f20bff1bb0c203562a
+      md5: e795a144b17a4a9bd00a893bb9965bcd
       size: 178
     - path: Training_Logs/Training_Main_Log.txt
-      md5: 2ac002e870a3d2def3916de8242bced8
+      md5: f407f63a67b4b1201b97ae120ed211c4
       size: 834
     - path: Training_Logs/columnValidationLog.txt
-      md5: 4732ef94495ebb8b8750398eb6b02126
+      md5: 17c10b537a1829535b1557f0b0a9cdce
       size: 2528
     - path: Training_Logs/dataTransformLog.txt
-      md5: b97a600bf32230f74b90f8ad22b0c7c2
+      md5: 7863577249ea1d3c34edf6a1fcd2031a
       size: 738
     - path: Training_Logs/missingValuesInColumn.txt
-      md5: 4c09fec8418465e95b9d7d4110180b55
+      md5: dadd67016476fef646cda13048d95a46
       size: 877
     - path: Training_Logs/nameValidationLog.txt
-      md5: bf0ea958992deb0e3b4c027215cb3269
+      md5: 09a1f35a7a78d956c11ac1ee6f2bed4e
       size: 8349
     - path: Training_Logs/valuesfromSchemaValidationLog.txt
-      md5: 15cf518d66b7d104292a54bfed80181f
+      md5: b02205bb3cc39441fbaefcf0f13b365a
       size: 103
     - path: data/TrainingArchiveBadData/
-      md5: ccee4655a1e711ea36108d5fe7fd7b1d.dir
+      md5: b5eeaf9e033c1a1d8110ca9f8855ed62.dir
       size: 10732173
       nfiles: 74
     - path: data/Training_FileFromDB/master.csv
@@ -162,23 +162,23 @@ stages:
       md5: 0ff0bdeb04295c72e53cce151f3ec94c
       size: 1789
     - path: src/data_preprocessing/clustering.py
-      md5: 1648640b26fa2f03a41645bca1e8121f
-      size: 5462
+      md5: d182ba530e3d4fbb2dd81efbde1ecd5f
+      size: 5466
     - path: src/data_preprocessing/preprocessing.py
       md5: 0c32c9fb20837232ab35d25eb939f1d8
       size: 9691
     - path: src/file_operations/file_methods.py
-      md5: 8c361eb23894ad520ab058823a4c40da
-      size: 5577
+      md5: 78b41e965f33ed4003ea137885785194
+      size: 5680
     - path: src/pipeline_02_model_training.py
-      md5: 89e0ea340fd9e29fd35e518e1bfe01bc
-      size: 1551
+      md5: 5c66191a5761e800180a341f1fac6ef7
+      size: 1038
     - path: src/trainingModel.py
-      md5: bf16ad12ac3f03093e5e5439ed1b0d7e
-      size: 4765
+      md5: 1be584bc47fd5dfbe9525458802c89c1
+      size: 4789
     outs:
     - path: Training_Logs/ModelTrainingLog.txt
-      md5: 58cdded22186b1c22df1f4653eb92b48
+      md5: 78badbefcecce2aa9c9edb70d896a92d
       size: 4415
     - path: data/preprocessed_data/K-Means_Elbow.PNG
       md5: 740037f39737c10f23a0b0a9984d138c
@@ -187,18 +187,18 @@ stages:
       md5: 3de7fcd28bded8fa20db3364a628694d
       size: 11768
     - path: models/KMeans
-      md5: 70b3b7d5fe169acf0158e2bdcf86a9bb.dir
+      md5: 8b9f62eb6b0915b2e833d4822504a14d.dir
       size: 15376
       nfiles: 1
     - path: models/RandomForest0
-      md5: 9e12887918672718970b4fb78ec3a8d6.dir
-      size: 8220
+      md5: 3bc05b9008e533a2541eed0a32fb78bc.dir
+      size: 8223
       nfiles: 1
     - path: models/RandomForest1
-      md5: 49e325a3d0d0e5944ff87a8004b2489f.dir
-      size: 8511
+      md5: 01e75eafb2de3d11b109fb5ddd95665d.dir
+      size: 8655
       nfiles: 1
     - path: models/RandomForest2
-      md5: 6d0ffe07c846de45b531bf1167384b0a.dir
-      size: 8655
+      md5: 1e8f6e3bfaa837f9069b2ffa0298d466.dir
+      size: 8076
       nfiles: 1
