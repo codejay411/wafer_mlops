@@ -3,11 +3,11 @@ from flask import Flask, request, render_template
 from flask import Response
 import os
 from flask_cors import CORS, cross_origin
-from training_Validation_Insertion import train_validation
-from trainingModel import trainModel
+from src.training_Validation_Insertion import train_validation
+from src.trainingModel import trainModel
 import flask_monitoringdashboard as dashboard
-from prediction_Validation_Insertion import pred_validation
-from predictFromModel import prediction
+from src.prediction_Validation_Insertion import pred_validation
+from src.predictFromModel import prediction
 import json
 
 os.putenv('LANG', 'en_US.UTF-8')
